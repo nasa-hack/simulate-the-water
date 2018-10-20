@@ -2,7 +2,7 @@ import pandas as pd
 import numpy as np
 import json
 
-data= open('worldcitiespop.csv','r',encoding='ansi')
+data= open('plot/worldcitiespop.csv','r',encoding='ansi')
 g1=pd.read_csv(data)
 g2=g1.iloc[:,1:]
 longi=[]

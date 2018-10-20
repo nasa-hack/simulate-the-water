@@ -4,6 +4,8 @@ from plot.views import *
 
 urlpatterns = [
     path('test', test),
-    path('disp', svdisp)
+    path('disp', svdisp),
+    path('accoddisp', accoddisp),
+    path('popdisp', popdisp)
 
 ]

@@ -1,7 +1,7 @@
 import pandas as pd
 import numpy as np
 import json
-data= open('acctodis.csv','r',encoding='utf-8')
+data= open('plot/acctodis.csv','r',encoding='utf-8')
 g1=pd.read_csv(data)
 g2=g1.iloc[:,1:]
 longi=[]
