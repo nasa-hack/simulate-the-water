@@ -6,6 +6,8 @@ import io
 from plot.longilati import smallvalues
 from plot.displacenearest import smallvalues as svdis
 from plot.accodnearest import smallvalues as svaccod
+from plot.populationnearest import smallvalues as svpop
+
 
 def test(request):
     longt = request.GET.get('lon', 27.999912)
@@ -28,6 +30,12 @@ def accoddisp(request):
     #print(x, lat, longt)
     return HttpResponse(x)
 
+def popdisp(request):
+    longt = request.GET.get('lon', 27.999912)
+    lat = request.GET.get('lat', 72.567)   
+    x=svpop(float(lat), float(longt))
+    #print(x, lat, longt)
+    return HttpResponse(x)
 
 '''def get_graph(long, lat):
     x = arange(0, 2*pi, 0.01)
