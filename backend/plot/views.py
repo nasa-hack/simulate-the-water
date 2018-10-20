@@ -5,6 +5,7 @@ import PIL, PIL.Image
 import io
 from plot.longilati import smallvalues
 from plot.displacenearest import smallvalues as svdis
+from plot.accodnearest import smallvalues as svaccod
 
 def test(request):
     longt = request.GET.get('lon', 27.999912)
@@ -17,6 +18,13 @@ def svdisp(request):
     longt = request.GET.get('lon', 27.999912)
     lat = request.GET.get('lat', 72.567)   
     x=svdis(float(lat), float(longt))
+    #print(x, lat, longt)
+    return HttpResponse(x)
+
+def accoddisp(request):
+    longt = request.GET.get('lon', 27.999912)
+    lat = request.GET.get('lat', 72.567)   
+    x=svaccod(float(lat), float(longt))
     #print(x, lat, longt)
     return HttpResponse(x)
 
