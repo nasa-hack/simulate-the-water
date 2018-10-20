@@ -8,7 +8,9 @@
 </ion-header>
 
 <ion-content id="body">
-  <ion-card *ngFor="let item of items">
+    
+      <br>
+<ion-card *ngFor="let item of items">
     <img src="{{item.img}}" width="100%;" height="200px;"/>
     <ion-card-content>
       <ion-card-title style="color:white">
@@ -19,5 +21,7 @@
       </p>
       <button ion-button style="margin-left:32%"(click)="openPage(item)">Click Me</button>
     </ion-card-content>
-  </ion-card>
+  </ion-card> 
+  <br>
+
 </ion-content>
