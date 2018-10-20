@@ -1,7 +1,6 @@
 import { Component,ViewChild} from '@angular/core';
 import { NavController, NavParams,Nav} from 'ionic-angular';
 import { Chart } from 'chart.js';
-import { Storage } from '@ionic/storage';
 import { AppProvider } from '../../providers/app/app';
 
 import { ListPage } from '../list/list';

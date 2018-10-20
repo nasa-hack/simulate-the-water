@@ -30,7 +30,7 @@ export class ListPage {
     // )
     const alert = this.alertCtrl.create({
       title: 'location',
-      subTitle: "latitude  :- "+localStorage.getItem("lat")+"\n"+" longitude :- "+localStorage.getItem("lng"),
+      subTitle: "latitude:-"+localStorage.getItem("lat")+"\n"+" longitude :- "+localStorage.getItem("lng"),
       buttons: ['OK']
     });
     alert.present();
