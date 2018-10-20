@@ -26,6 +26,17 @@ def smallvalues(lat,lon):
         if small<reqd:
             reqd=small
             index=i
+<<<<<<< HEAD
+    return reqdvalues(index)
+def reqdvalues(index):
+   keys=g2.head(0)
+   keys=keys.columns.tolist()
+   jsonvalue=g2.loc[g2['Name']==g2.loc[index, 'Name']]
+   json = jsonvalue.to_json(orient='split')
+   return(json)   
+      
+print(smallvalues(7.009,32.0987))
+=======
     reqdvalues(index)
 
 def reqdvalues(index):
@@ -43,6 +54,7 @@ def reqdvalues(index):
     return(jsondumps)'''   
       
 index = smallvalues(7.009,32.0987)
+>>>>>>> c5180873d3102e53f62bb55f9ee6da076893deea
 
 
     
