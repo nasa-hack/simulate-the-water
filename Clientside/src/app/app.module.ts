@@ -9,11 +9,11 @@ import { IonicStorageModule } from '@ionic/storage';
 import { MyApp } from './app.component';
 import { HomePage } from '../pages/home/home';
 import { ListPage } from '../pages/list/list';
-import { RainPage } from '../pages//rain/rain';
-import { PopulationPage } from '../pages//population/population';
-import { PopDenPage } from '../pages//pop-den/pop-den';
-import { WaterPage } from '../pages//water/water';
-
+import { RainPage } from '../pages/rain/rain';
+import { PopulationPage } from '../pages/population/population';
+import { PopDenPage } from '../pages/pop-den/pop-den';
+import { WaterPage } from '../pages/water/water';
+import { SosPage } from '../pages/sos/sos';
 
 import { StatusBar } from '@ionic-native/status-bar';
 import { SplashScreen } from '@ionic-native/splash-screen';
@@ -27,8 +27,8 @@ import { AppProvider } from '../providers/app/app';
     WaterPage,
     PopDenPage,
     PopulationPage,
-    RainPage
-    
+    RainPage,
+    SosPage 
   ],
   imports: [
     BrowserModule,
@@ -48,7 +48,8 @@ import { AppProvider } from '../providers/app/app';
     WaterPage,
     PopDenPage,
     PopulationPage,
-    RainPage
+    RainPage,
+    SosPage 
   ],
   providers: [
     StatusBar,

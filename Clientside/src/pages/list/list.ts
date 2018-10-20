@@ -1,7 +1,8 @@
 import { Component} from '@angular/core';
 import { NavController, NavParams,Nav } from 'ionic-angular';
+import { AlertController } from 'ionic-angular';
 
-import Swal from 'sweetalert2'
+// import Swal from 'sweetalert2'
 
 import { RainPage } from '../rain/rain';
 import { PopulationPage } from '../population/population';
@@ -19,13 +20,20 @@ export class ListPage {
   icons: string[];
   items: any;
 
-  constructor(public navCtrl: NavController, public navParams: NavParams,public nav:Nav) {
+  constructor(public navCtrl: NavController,public alertCtrl: AlertController, public navParams: NavParams,public nav:Nav) {
     // If we navigated to this page, we will have an item available as a nav param
     this.selectedItem = navParams.get('item');
-    Swal(
-      'location',
-      "latitude "+localStorage.getItem("lat")+"\n"+" longitude "+localStorage.getItem("lng"),
-    )
+
+    // Swal(
+    //   'location',
+    //   "latitude "+localStorage.getItem("lat")+"\n"+" longitude "+localStorage.getItem("lng"),
+    // )
+    const alert = this.alertCtrl.create({
+      title: 'location',
+      subTitle: "latitude  :- "+localStorage.getItem("lat")+"\n"+" longitude :- "+localStorage.getItem("lng"),
+      buttons: ['OK']
+    });
+    alert.present();
 
     this.items = [{
     name:"Water Level Rise/Falls",
