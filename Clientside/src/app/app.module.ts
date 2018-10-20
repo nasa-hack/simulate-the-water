@@ -1,8 +1,8 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { ErrorHandler, NgModule,CUSTOM_ELEMENTS_SCHEMA } from '@angular/core';
-import { IonicApp, IonicErrorHandler, IonicModule } from 'ionic-angular';
+import { IonicApp, IonicErrorHandler, IonicModule,Nav} from 'ionic-angular';
 import { Geolocation } from '@ionic-native/geolocation';
-import {HttpClientModule} from '@angular/common/http';
+import { HttpClientModule } from '@angular/common/http';
 import { HttpModule } from '@angular/http';
 import { IonicStorageModule } from '@ionic/storage';
 
@@ -14,6 +14,7 @@ import { PopulationPage } from '../pages/population/population';
 import { PopDenPage } from '../pages/pop-den/pop-den';
 import { WaterPage } from '../pages/water/water';
 import { SosPage } from '../pages/sos/sos';
+import { WhatsosPage } from '../pages/whatsos/whatsos';
 
 import { StatusBar } from '@ionic-native/status-bar';
 import { SplashScreen } from '@ionic-native/splash-screen';
@@ -28,7 +29,8 @@ import { AppProvider } from '../providers/app/app';
     PopDenPage,
     PopulationPage,
     RainPage,
-    SosPage 
+    SosPage,
+    WhatsosPage
   ],
   imports: [
     BrowserModule,
@@ -49,7 +51,8 @@ import { AppProvider } from '../providers/app/app';
     PopDenPage,
     PopulationPage,
     RainPage,
-    SosPage 
+    SosPage,
+    WhatsosPage 
   ],
   providers: [
     StatusBar,

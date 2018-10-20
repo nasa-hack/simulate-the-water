@@ -1,10 +1,10 @@
 import { Component , ViewChild, ElementRef} from '@angular/core';
 import { NavController,Nav } from 'ionic-angular';
+import { ModalController } from 'ionic-angular';
 import leaflet from 'leaflet';
-import { LAZY_LOADED_TOKEN } from '../../../node_modules/ionic-angular/umd/util/module-loader';
-
 
 import { ListPage } from '../list/list';
+import { WhatsosPage } from '../whatsos/whatsos';
 
 @Component({
   selector: 'page-home',
@@ -13,12 +13,17 @@ import { ListPage } from '../list/list';
 export class HomePage {
   @ViewChild('map') mapContainer: ElementRef;
   map: any;
-  constructor(public navCtrl: NavController,public nav:Nav) {
+  constructor(public navCtrl: NavController,public modalCtrl: ModalController,public nav:Nav) {
 
   }
 
   ionViewDidEnter() {
     this.loadmap();
+  }
+
+  presentModal() {
+    this.navCtrl.push(WhatsosPage);
+    this.map.remove();
   }
 
   loadmap() {
