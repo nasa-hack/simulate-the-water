@@ -6,6 +6,6 @@ urlpatterns = [
     path('test', test),
     path('disp', svdisp),
     path('accoddisp', accoddisp),
-    path('popdisp', popdisp)
-
+    path('popdisp', popdisp),
+    path('refugg', refs)
 ]
