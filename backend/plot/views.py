@@ -1,9 +1,10 @@
 from django.http import HttpResponse, JsonResponse
 from matplotlib import pylab
-from pylab import *
+#from pylab import *
 import PIL, PIL.Image
 import io
 from plot.longilati import smallvalues
+from plot.displacenearest import smallvalues as svdis
 
 def test(request):
     longt = request.GET.get('lon', 27.999912)
@@ -11,6 +12,14 @@ def test(request):
     x=smallvalues(lat, longt)
     #print(x, lat, longt)
     return HttpResponse(x)
+
+def svdisp(request):
+    longt = request.GET.get('lon', 27.999912)
+    lat = request.GET.get('lat', 72.567)   
+    x=svdis(float(lat), float(longt))
+    #print(x, lat, longt)
+    return HttpResponse(x)
+
 
 '''def get_graph(long, lat):
     x = arange(0, 2*pi, 0.01)
