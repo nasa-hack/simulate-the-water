@@ -2,6 +2,7 @@ import { Component , ViewChild, ElementRef} from '@angular/core';
 import { NavController,Nav } from 'ionic-angular';
 import { ModalController } from 'ionic-angular';
 import leaflet from 'leaflet';
+import { AlertController } from 'ionic-angular';
 
 import { ListPage } from '../list/list';
 import { WhatsosPage } from '../whatsos/whatsos';
@@ -13,7 +14,7 @@ import { WhatsosPage } from '../whatsos/whatsos';
 export class HomePage {
   @ViewChild('map') mapContainer: ElementRef;
   map: any;
-  constructor(public navCtrl: NavController,public modalCtrl: ModalController,public nav:Nav) {
+  constructor(public navCtrl: NavController,private alertCtrl: AlertController,public modalCtrl: ModalController,public nav:Nav) {
 
   }
 
@@ -25,6 +26,16 @@ export class HomePage {
     this.navCtrl.push(WhatsosPage);
     this.map.remove();
   }
+
+  presentAlert() {
+    let alert = this.alertCtrl.create({
+      title: 'Emergency',
+      subTitle: 'Your S.O.S message is sent !!!',
+      buttons: ['Ok']
+    });
+    alert.present();
+  }
+  
 
   loadmap() {
     this.map = leaflet.map("map").fitWorld();
