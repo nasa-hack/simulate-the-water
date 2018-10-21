@@ -11,6 +11,7 @@ keys=[]
 g1dict={}
 #print(g1.columns)
 df = pd.DataFrame()
+df.fillna(2071)
 df['col'] = g1.columns
 
 #print(df)
