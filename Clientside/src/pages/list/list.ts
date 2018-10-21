@@ -8,6 +8,8 @@ import { RainPage } from '../rain/rain';
 import { PopulationPage } from '../population/population';
 import { PopDenPage } from '../pop-den/pop-den';
 import { WaterPage } from '../water/water';
+import { DispPage } from '../disp/disp';
+import { RefugPage } from '../refug/refug';
 
 @Component({
   selector: 'page-list',
@@ -35,7 +37,20 @@ export class ListPage {
     });
     alert.present();
 
-    this.items = [{
+    this.items = [
+      {
+        name:"Migrant",
+        description:"Human migration is the movement by people from one place to another with the intentions of settling, permanently or temporarily in a new location. The movement is often over long distances and from one country to another, but internal migration is also possible; indeed, this is the dominant form globally. ",
+        img:"https://www.dw.com/image/19116722_303.jpg",
+        component:DispPage
+      },
+      {
+        name:"Refugees",
+        description:"A refugee, generally speaking, is a displaced person who has been forced to cross national boundaries and who cannot return home safely. Such a person may be called an asylum seeker until granted refugee status by the contracting state or the UNHCR if they formally make a claim for asylum.",
+        img:"https://g8fip1kplyr33r3krz5b97d1-wpengine.netdna-ssl.com/wp-content/uploads/2016/05/GettyImages-494326182-1160x772.jpg",
+        component:RefugPage
+      },
+      {
     name:"Water Level Rise/Falls",
     description:"Water level or gauge height or stage is the elevation of the free surface of a stream, lake or reservoir relative to a specified vertical datum.",
     img:"https://resize.indiatvnews.com/en/resize/newbucket/715_-/2016/06/water-bodies-1466850920.jpg",

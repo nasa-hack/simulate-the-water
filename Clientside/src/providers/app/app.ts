@@ -19,4 +19,12 @@ export class AppProvider {
     return this.http.get("https://nasahack.herokuapp.com/plot/test"+"?lon="+long+"&lat="+lat);
   }
 
+  getDisplacementData(lat,long){
+    return this.http.get("https://nasahack.herokuapp.com/plot/disp"+"?lon="+long+"&lat="+lat);
+  }
+
+  getRefugData(lat,long){
+    return this.http.get("https://nasahack.herokuapp.com/plot/refugg"+"?lon="+long+"&lat="+lat);
+  }
+
 }

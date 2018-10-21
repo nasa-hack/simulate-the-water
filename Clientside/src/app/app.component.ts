@@ -3,9 +3,11 @@ import { Nav, Platform } from 'ionic-angular';
 import { StatusBar } from '@ionic-native/status-bar';
 import { SplashScreen } from '@ionic-native/splash-screen';
 
+
 import { HomePage } from '../pages/home/home';
 import { ListPage } from '../pages/list/list';
 import { SosPage } from '../pages/sos/sos';
+import { AppProvider } from '../providers/app/app';
 
 @Component({
   templateUrl: 'app.html'
@@ -13,13 +15,27 @@ import { SosPage } from '../pages/sos/sos';
 export class MyApp {
   @ViewChild(Nav) nav: Nav;
 
+  sub:any;
+
   rootPage: any = HomePage;
 
   pages: Array<{title: string, component: any}>;
 
-  constructor(public platform: Platform, public statusBar: StatusBar, public splashScreen: SplashScreen) {
+  constructor(public platform: Platform,public app:AppProvider, public statusBar: StatusBar, public splashScreen: SplashScreen) {
+    // setInterval(function(){
+    //   this.app.getDisplacementData(localStorage.getItem("lat"),localStorage.getItem("lng")).subscribe(res=>{
+    //     this.result=res;
+    //       this.result.data.map(r=>{
+    //            this.label.push(r[1]);
+    //            this.data.push(r[2]);
+    //       })
+        
+    //  },err=>{
+    //      this.error="Someting Went Wrong";
+    //  });
+    // },3000);
     this.initializeApp();
- 
+    
     // used for an example of ngFor and navigation
     this.pages = [
       { title: 'Home',component: HomePage},
@@ -35,6 +51,7 @@ export class MyApp {
       // Here you can do any higher level native things you might need.
       this.statusBar.styleDefault();
       this.splashScreen.hide();
+      
     });
   }
 

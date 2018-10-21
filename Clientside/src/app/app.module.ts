@@ -15,6 +15,8 @@ import { PopDenPage } from '../pages/pop-den/pop-den';
 import { WaterPage } from '../pages/water/water';
 import { SosPage } from '../pages/sos/sos';
 import { WhatsosPage } from '../pages/whatsos/whatsos';
+import { DispPage } from '../pages/disp/disp';
+import { RefugPage } from '../pages/refug/refug';
 
 import { StatusBar } from '@ionic-native/status-bar';
 import { SplashScreen } from '@ionic-native/splash-screen';
@@ -30,7 +32,9 @@ import { AppProvider } from '../providers/app/app';
     PopulationPage,
     RainPage,
     SosPage,
-    WhatsosPage
+    WhatsosPage,
+    DispPage,
+    RefugPage
   ],
   imports: [
     BrowserModule,
@@ -52,7 +56,9 @@ import { AppProvider } from '../providers/app/app';
     PopulationPage,
     RainPage,
     SosPage,
-    WhatsosPage 
+    WhatsosPage,
+    DispPage,
+    RefugPage
   ],
   providers: [
     StatusBar,
